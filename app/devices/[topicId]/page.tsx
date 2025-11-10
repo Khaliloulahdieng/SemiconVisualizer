@@ -75,6 +75,7 @@ export default function TopicPage() {
             <VisualizationPanel
               visualizationState={currentSection.visualizationState}
               interactiveElements={currentSection.interactiveElements}
+              renderer={topic.visualization.renderer}
             />
           }
         />
