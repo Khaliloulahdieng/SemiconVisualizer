@@ -1,0 +1,132 @@
+{
+    "id": "nmos-transistor",
+    "category": "devices",
+    "title": "NMOS Transistor",
+    "description": "Learn how an n-channel MOSFET is fabricated and operates",
+    "difficulty": "beginner",
+    "chapters": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "sections": [
+          {
+            "id": "what-is-mosfet",
+            "title": "What is a MOSFET?",
+            "content": "A **Metal-Oxide-Semiconductor Field-Effect Transistor (MOSFET)** is a fundamental building block of modern integrated circuits. It acts as an electronic switch that can be turned on or off by applying voltage to its gate terminal.\n\n**Key Components:**\n- **Gate**: Control terminal\n- **Source**: Electron entry point\n- **Drain**: Electron exit point\n- **Substrate**: Silicon base (p-type for NMOS)\n\nMOSFETs are the basis for digital logic, memory, and almost all modern electronics.",
+            "visualizationState": {
+              "type": "device-operation",
+              "camera": {
+                "position": [0, 5, 10],
+                "target": [0, 0, 0]
+              },
+              "layers": ["substrate", "oxide", "gate", "source", "drain"],
+              "animation": "rotate-idle"
+            }
+          },
+          {
+            "id": "why-important",
+            "title": "Why Are MOSFETs Important?",
+            "content": "MOSFETs revolutionized electronics because they:\n\n**Low Power**: Only consume power during switching\n\n**Scalable**: Can be made incredibly small (currently 3nm process nodes)\n\n**Fast**: Switch billions of times per second\n\n**Dense**: Billions can fit on a single chip\n\nYour smartphone contains over **10 billion MOSFETs** working together to create the computing power you use every day.",
+            "visualizationState": {
+              "type": "device-operation",
+              "camera": {
+                "position": [0, 8, 12],
+                "target": [0, 0, 0]
+              },
+              "layers": ["substrate", "oxide", "gate", "source", "drain"],
+              "animation": "zoom-out"
+            }
+          }
+        ]
+      },
+      {
+        "id": "structure",
+        "title": "Device Structure",
+        "sections": [
+          {
+            "id": "cross-section",
+            "title": "Cross-Sectional View",
+            "content": "Let's examine the MOSFET's structure layer by layer. Each material serves a specific purpose:\n\n**Silicon Substrate** (bottom, blue): p-type doped silicon base\n\n**Gate Oxide** (thin red layer): Insulator that blocks current but allows electric field\n\n**Polysilicon Gate** (yellow): Metal electrode that controls the channel\n\n**Source/Drain** (green regions): Heavily n-doped regions for electron injection/collection\n\nThe spacing between source and drain is called the **channel length** - a critical dimension that determines transistor speed.",
+            "visualizationState": {
+              "type": "cross-section",
+              "camera": {
+                "position": [15, 3, 0],
+                "target": [0, 0, 0]
+              },
+              "layers": ["substrate", "oxide", "gate", "source", "drain"],
+              "highlights": ["substrate"],
+              "animation": "none"
+            }
+          }
+        ]
+      },
+      {
+        "id": "operation",
+        "title": "How It Works",
+        "sections": [
+          {
+            "id": "off-state",
+            "title": "OFF State (Vgs < Vth)",
+            "content": "When the gate voltage is **below the threshold voltage (Vth)**, the MOSFET is OFF:\n\n**No Channel**: The p-type substrate blocks electron flow between source and drain\n\n**High Resistance**: Current cannot flow (except tiny leakage)\n\n**Logic '0'**: In digital circuits, this represents a zero bit\n\nThe device acts like an open switch - no connection between source and drain.",
+            "visualizationState": {
+              "type": "device-operation",
+              "camera": {
+                "position": [0, 5, 10],
+                "target": [0, 0, 0]
+              },
+              "layers": ["substrate", "oxide", "gate", "source", "drain", "depletion"],
+              "highlights": ["depletion"],
+              "animation": "off-state"
+            },
+            "interactiveElements": [
+              {
+                "type": "slider",
+                "id": "gate-voltage-off",
+                "label": "Gate Voltage",
+                "range": [0, 0.7],
+                "defaultValue": 0,
+                "unit": "V"
+              }
+            ]
+          },
+          {
+            "id": "on-state",
+            "title": "ON State (Vgs > Vth)",
+            "content": "When gate voltage **exceeds the threshold voltage**, the MOSFET turns ON:\n\n**Inversion Layer**: Electric field attracts electrons to the surface, creating an n-type channel\n\n**Low Resistance**: Electrons can flow freely from source to drain\n\n**Logic '1'**: In digital circuits, this represents a one bit\n\nThe device acts like a closed switch - source and drain are connected through the channel.",
+            "visualizationState": {
+              "type": "device-operation",
+              "camera": {
+                "position": [0, 5, 10],
+                "target": [0, 0, 0]
+              },
+              "layers": ["substrate", "oxide", "gate", "source", "drain", "channel"],
+              "highlights": ["channel"],
+              "animation": "on-state"
+            },
+            "interactiveElements": [
+              {
+                "type": "slider",
+                "id": "gate-voltage-on",
+                "label": "Gate Voltage",
+                "range": [0.7, 2],
+                "defaultValue": 1.8,
+                "unit": "V"
+              },
+              {
+                "type": "slider",
+                "id": "drain-voltage",
+                "label": "Drain Voltage",
+                "range": [0, 2],
+                "defaultValue": 1.8,
+                "unit": "V"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "visualization": {
+      "renderer": "TransistorViz",
+      "defaultView": "cross-section-3d"
+    }
+  }
