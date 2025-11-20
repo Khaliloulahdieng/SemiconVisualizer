@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🧭 Roadmap
+## 🚧 November 2025 – January 2026: Device Fundamentals
+## I. Build 3D Visualizations of Basic Semiconductor Devices
+## 1-1. NMOS Transistor
 
-## Getting Started
+  ## 1-1-1 — 3D Device Model
+  A clean, structured representation showing drain, source, channel, and the full gate stack.
+  
+  ## 1-1-2 — Electrical Interaction Animations
+  Visualize device physics as users interactively change V<sub>G</sub>, V<sub>D</sub>, and V<sub>S</sub> (e.g., channel formation, current flow).
 
-First, run the development server:
+## 1-2. PMOS Transistor
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Same structure as the NMOS, including 3D modeling and voltage-dependent animations.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 1-3. PN Junction Diode
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3D schematic representation showing P/N regions, depletion layer, and contacts.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Interactive visualization of forward bias, reverse bias, and depletion width changes.
 
-## Learn More
+## 🧱 2026 (Ongoing): Complex Semiconductor Systems
+## II. Build Interactive 3D Models of Chips
 
-To learn more about Next.js, take a look at the following resources:
+## 2-1. CPU
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 2-1-1 — High-Level 3D Chip Overview
+Representation of logic blocks, caches, ALUs, and other major components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 2-1-2 — Interconnect Visualization
+Layers, metallization, vias, BEOL structure.
 
-## Deploy on Vercel
+## 2-1-3 — CPU Execution Animation
+Demonstrate a processor performing tasks (e.g., arithmetic operations, saving an image).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 2-2. NAND Flash & Memory Chips
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(Will follow the same approach as CPU: physical representation → interconnects → functional animation.)
+
+## 🤝 Contributing
+
+We welcome contributions of all kinds — visuals, physics corrections, UX improvements, documentation, or code.
+
+## Contribution Guidelines
+
+Accuracy first.
+Ensure the animations and visualizations are consistent with known semiconductor physics.
+
+Clarity matters.
+Visuals should help beginners understand concepts without oversimplifying them.
+
+Keep things accessible.
+Use clear naming, intuitive UI, and helpful tooltips where needed.
+
+Make it your own.
+Bring your ideas, creativity, and expertise. All improvements are welcome.
+
+How to Contribute
+
+Fork the repository
+
+Create a feature branch (feature/your-feature-name)
+
+Submit a pull request with a clear description
+
+Our team and community will review it collaboratively
+
+## 💬 Community & Support
+
+If you want to join the discussion, propose features, or help with device-physics accuracy, feel free to open Issues or start Discussions.
